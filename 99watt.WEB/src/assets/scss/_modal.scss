@@ -1,0 +1,201 @@
+modal {
+  display: none;
+
+  .modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: auto;
+
+    .modal-body {
+      background: #fff;
+      margin-top: 40px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 6px;
+      position: relative;
+
+      .no-result {
+        padding: 20px;
+        text-align: center;
+      }
+    }
+    .close-popup {
+      color: $primary;
+      border: none;
+      top: 0;
+      right: 0;
+      position: absolute;
+      background: none;
+      padding: 10px;
+      z-index: 99;
+    }
+    .popup-head {
+      text-align: center;
+      position: relative;
+      margin: 0px 10px 20px;
+      padding-top: 5px;
+      @include d-flex;
+      @include align-items-center;
+      @include justify-space-between;
+
+      .back {
+        display: inline-block;
+        font-size: 20px;
+      }
+      h2 {
+        margin: 0 auto;
+        font-size: 18px;
+        text-transform: uppercase;
+      }
+      .more {
+        color: $primary;
+        font-size: 5.75px;
+        position: relative;
+        padding: 10px 0 16px 0;
+
+        ul {
+          top: 100%;
+          right: -11px;
+          position: absolute;
+          width: 300px;
+          border: 1px solid #d8d8d8;
+          border-radius: 5px;
+          background-color: $white;
+          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+          z-index: 9;
+
+          &::after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            display: block;
+            transform: rotate(45deg);
+            top: -11px;
+            right: 10px;
+            position: absolute;
+            border-left: 1px solid #d8d8d8;
+            border-top: 1px solid #d8d8d8;
+            background-color: #ffffff;
+            border-top-left-radius: 3px;
+            box-shadow: 0px 0px 2px 0 rgba(0, 0, 0, 0.2);
+          }
+
+          li {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            text-align: center;
+
+            + li {
+              border-top: 1px solid #d8d8d8;
+            }
+
+            a {
+              padding: 10px 10px 12px;
+              display: block;
+            }
+
+            .report {
+              color: #f5372d;
+            }
+          }
+        }
+
+      }
+      .link {
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+    .popup-body {
+      padding: 0 20px;
+    
+      .description-message {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: normal;
+        color: #262626;
+      }
+    }
+    .modal-search {
+      margin: 10px 20px;
+      position: relative;
+
+      .icon-search {
+        top: 8px;
+        left: 12px;
+        position: absolute;
+        color: #b6b6b6;
+      }
+
+      .icon-close-circle {
+        top: 0px;
+        right: 0px;
+        position: absolute;
+        padding: 9px;
+        color: rgba(0, 0, 0, 0.7);
+        cursor: pointer;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        border-radius: 2px;
+        padding: 5px 30px 5px 35px;
+        border: 1px solid #c4c4c5;
+        font-size: 16px;
+        letter-spacing: 0.3px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.75;
+    z-index: 900;
+  }
+
+  .action {
+    padding: 20px 20px;
+
+    .btn + .btn {
+      margin-top: 10px;
+    }
+  }
+
+
+}
+body.modal-open {
+  /* body overflow is hidden to hide main scrollbar when modal window is open */
+  overflow: hidden;
+  padding-right: 15px;
+}
+
+@media (max-width: 767px) {
+  modal {
+    .modal {
+      .modal-search {
+        margin-left: 10px; 
+        margin-right: 10px;
+
+        input[type="text"] {
+          font-size: 14px;
+        }
+      }
+      .modal-body {
+        max-width: calc(100% - 20px);
+      }
+      
+    }
+  }
+}

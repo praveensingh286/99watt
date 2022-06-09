@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6GvzTWskjatxOpib1JoRissIJtFs5a1LMrr9xbhzRnWkDzrkL2to4nYMOJeimSLS8AuSwNg2ehDuBwdPDzvL4Q==",
+  "dgSpecHash": "ZRchVCbWVAe+Qq+BwNe2PtDP27z10wKfEGC3york6ZJ5VkIwqmYVkqqVMLiWVLx2+jF8BQMiWO4A1WZPnX8VDQ==",
   "success": true,
-  "projectFilePath": "D:\\Project\\99watt\\99watt.API\\99watt.API.csproj",
+  "projectFilePath": "D:\\Project\\99watt\\99watt.api\\99watt.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\prave\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\prave\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

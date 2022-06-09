@@ -1,0 +1,233 @@
+.review-wrap {
+  .course-list {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        cursor: pointer;        
+        border-top: 1px solid #e9e9ea;       
+
+        a {
+          color: #000;
+          font-size: 17px;
+          font-weight: 700;
+          line-height: 20px;
+          padding: 10px 20px;
+          @include d-flex;
+
+          &::after {
+            content: "\e91c";
+            color: $primary;
+            font-family: 'icomoon';
+            margin-left: auto;
+            padding-left: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  .course-name {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 14px 20px;
+    @include d-flex;
+    @include align-items-center;
+    border-top: 1px solid #e9e9ea;
+    margin-top: -20px;
+
+    span {
+      margin-left: auto;
+      font-size: 12px;
+    }
+  }
+
+  .trainer {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border-top: 1px solid #e9e9ea;
+    @include d-flex;
+    @include align-items-center;
+    cursor: pointer;
+
+    .thumb-wrap {
+      margin-right: 16px;
+      position: relative;
+
+      .organiser-icon {
+        width: 28px;
+        height: 28px;
+        display: inline-block;
+        border-radius: 50%;
+        background-color: #fff;
+        text-align: center;
+        position: absolute;
+        bottom: -7px;
+        color: $primary;
+        line-height: 28px;
+
+        i {
+          font-size: 16px;
+        }
+      }
+
+      .thumb {
+        width: 80px;
+        padding-bottom: 80px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 1px solid #2988cb;
+
+        img {
+          width: 100%;
+          min-height: 100%;
+          top: 50%;
+          left: 50%;
+          position: absolute;
+          object-fit: cover;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    .info {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+
+      h4 {
+        margin: 0 0 10px;
+        @include d-flex;
+        @include align-items-center;
+
+        span {
+          font-size: 12px;
+          font-weight: 400;
+          margin-left: auto;
+          padding-left: 10px;
+        }
+      }
+      p {
+        margin: 0 0 6px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: -0.3px;
+        text-transform: uppercase;
+        color: rgba(0,0,0,0.5);
+
+        span {
+          color: $primary;
+          margin: 0 6px 0 0;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  
+}
+
+.review-wrap,
+.rating-popup {
+  /*Star Rating*/
+  .rating {
+    background-color: #efeff4;
+    padding: 20px 20px 15px;
+
+    h4 {
+      font-size: 16px;
+      line-height: 1;
+      margin: 0 0 26px;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: #84848e;
+      font-size: 14px;
+      text-align: center;
+      text-transform: uppercase;      
+      margin: 0;
+    }
+  }
+  .star-rating {
+    text-align: center;
+    margin: 0 0 10px;
+
+    /* use display:inline-flex to prevent whitespace issues. alternatively, you can put all the children of .rating-group on a single line */
+    .rating-group {
+      margin: 0 0 5px -21px;
+      display: inline-flex;
+    }
+    
+    /* make hover effect work properly in IE */
+    .rating__icon {
+      pointer-events: none;
+    }
+    
+    /* hide radio inputs */
+    .rating__input {
+    position: absolute !important;
+    left: -9999px !important;
+    }
+
+    /* set icon padding and size */
+    .rating__label {
+      cursor: pointer;
+      /* if you change the left/right padding, update the margin-right property of .rating__label--half as well. */
+      padding: 0 0.1em;
+      font-size: 48px;
+    }
+
+    /* add padding and positioning to half star labels */
+    .rating__label--half {
+      padding-right: 0;
+      margin-right: -0.6em;
+      z-index: 2;
+    }
+    
+    /* set default star color */
+    .rating__icon--star {
+      color: $primary;
+    }
+    
+    /* set color of none icon when unchecked */
+    .rating__icon--none {
+      color: #eee;
+    }
+
+    /* if none icon is checked, make it red */
+    .rating__input--none:checked + .rating__label .rating__icon--none {
+      color: red;
+    }
+
+    /* if any input is checked, make its following siblings grey */
+    .rating__input:checked ~ .rating__label .rating__icon--star {
+      color: #ddd;
+    }
+    
+    /* make all stars orange on rating group hover */
+    .rating-group:hover .rating__label .rating__icon--star,
+    .rating-group:hover .rating__label--half .rating__icon--star {
+      color: $primary;
+    }
+
+    /* make hovered input's following siblings grey on hover */
+    .rating__input:hover ~ .rating__label .rating__icon--star,
+    .rating__input:hover ~ .rating__label--half .rating__icon--star {
+      color: #ddd;
+    }
+    
+    /* make none icon grey on rating group hover */
+    .rating-group:hover .rating__input--none:not(:hover) + .rating__label .rating__icon--none {
+      color: #eee;
+    }
+
+    /* make none icon red on hover */
+    .rating__input--none:hover + .rating__label .rating__icon--none {
+      color: red;
+    }
+  }
+}

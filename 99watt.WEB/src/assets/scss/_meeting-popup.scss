@@ -1,0 +1,120 @@
+.meeting-popup {
+  max-width: 400px;
+
+  .image {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 45.09%;
+    border-radius: 6px 6px 0 0;
+    background-color: $primary;
+
+    img {
+      width: 100%;
+      min-height: 100%;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+    }
+
+    i {
+      top: 50%;
+      left: 50%;      
+      position: absolute;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 40px;
+    }
+
+    input[type="file"] {
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+  }
+  .info {
+    padding: 20px 20px;
+    border-bottom: 1px solid #ccc;
+
+    p {
+      margin: 0;
+    }
+  }
+  .form-group {
+    margin: 0;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+
+    .form-control {
+      border: none;
+      padding: 0;
+    }
+
+    .participant-count {
+      @include d-flex;
+      @include align-items-center;
+      @include justify-space-between;
+
+      &:not(first-child) {
+        margin-top: 8px;
+      }
+
+      .p-label {
+        font-size: 14px;
+        font-weight: 500;
+      }
+      
+      counter-input {
+        margin-left: auto;
+      }
+    }
+    .user-info {
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: 16px;
+    }
+  }
+  .elo-row {
+    margin: 0 0 22px;
+    padding: 10px 20px;
+    border-top: 1px solid #e9e9ea;
+    
+    .label {
+      @include d-flex;
+      margin: 0 0 20px;
+      text-transform: uppercase;
+
+      h4 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: bold;            
+        line-height: 1.57;
+        letter-spacing: normal;
+      }
+
+      span {
+        margin-left: auto;
+        font-size: 15px;
+        letter-spacing: -0.36px;
+        color: rgba(0,0,0,0.3);
+      }
+
+      .btn-premium {
+        margin-left: 16px;
+      }
+    }  
+    .range {
+      margin: 0 0 20px;
+    }
+    .elo-info {
+      font-size: 12px;
+      line-height: normal;
+      letter-spacing: 0.3px;
+      color: rgba(0,0,0,0.3);
+      text-transform: uppercase;
+    }          
+  }
+}

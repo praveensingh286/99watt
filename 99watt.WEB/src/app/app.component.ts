@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = '99watt.WEB';
+  a='b';
+  b='a';
 }
